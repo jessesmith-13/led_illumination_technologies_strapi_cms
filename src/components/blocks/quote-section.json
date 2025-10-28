@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blocks_quote_sections",
+  "info": {
+    "displayName": "Quote Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

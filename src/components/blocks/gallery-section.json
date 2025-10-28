@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blocks_gallery_sections",
+  "info": {
+    "displayName": "Gallery Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

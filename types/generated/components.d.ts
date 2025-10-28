@@ -1,5 +1,55 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BlocksAboutSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_about_sections';
+  info: {
+    displayName: 'About Section';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksGallerySection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_gallery_sections';
+  info: {
+    displayName: 'Gallery Section';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_hero_sections';
+  info: {
+    displayName: 'Hero Section';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksQuoteSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_quote_sections';
+  info: {
+    displayName: 'Quote Section';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksServicesSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_services_sections';
+  info: {
+    displayName: 'Services Section';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -65,6 +115,11 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'blocks.about-section': BlocksAboutSection;
+      'blocks.gallery-section': BlocksGallerySection;
+      'blocks.hero-section': BlocksHeroSection;
+      'blocks.quote-section': BlocksQuoteSection;
+      'blocks.services-section': BlocksServicesSection;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
