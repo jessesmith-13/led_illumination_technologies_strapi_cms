@@ -50,28 +50,6 @@ export interface BlocksServicesSection extends Struct.ComponentSchema {
   };
 }
 
-export interface ElementsLogo extends Struct.ComponentSchema {
-  collectionName: 'components_elements_logos';
-  info: {
-    displayName: 'logo';
-  };
-  attributes: {
-    image: Schema.Attribute.Media<'images'>;
-  };
-}
-
-export interface ElementsNavLink extends Struct.ComponentSchema {
-  collectionName: 'components_elements_nav_links';
-  info: {
-    displayName: 'navLink';
-  };
-  attributes: {
-    href: Schema.Attribute.String;
-    isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    text: Schema.Attribute.String;
-  };
-}
-
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -142,8 +120,6 @@ declare module '@strapi/strapi' {
       'blocks.hero-section': BlocksHeroSection;
       'blocks.quote-section': BlocksQuoteSection;
       'blocks.services-section': BlocksServicesSection;
-      'elements.logo': ElementsLogo;
-      'elements.nav-link': ElementsNavLink;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
