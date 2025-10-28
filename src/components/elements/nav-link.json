@@ -5,10 +5,10 @@
   },
   "options": {},
   "attributes": {
-    "href": {
+    "text": {
       "type": "string"
     },
-    "text": {
+    "href": {
       "type": "string"
     },
     "isExternal": {
