@@ -11,8 +11,15 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "heading": {
-      "type": "string"
+    "logo": {
+      "type": "component",
+      "component": "elements.logo",
+      "repeatable": false
+    },
+    "navBar": {
+      "type": "component",
+      "component": "elements.nav-link",
+      "repeatable": true
     }
   }
 }
