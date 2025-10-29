@@ -35,6 +35,11 @@
       "type": "component",
       "component": "elements.social-icon",
       "repeatable": true
+    },
+    "logo": {
+      "type": "component",
+      "component": "elements.logo",
+      "repeatable": false
     }
   }
 }
