@@ -5,8 +5,34 @@
   },
   "options": {},
   "attributes": {
-    "heading": {
+    "title": {
       "type": "string"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "ctaButton": {
+      "type": "component",
+      "component": "elements.button",
+      "repeatable": false
+    },
+    "secondaryButton": {
+      "type": "component",
+      "component": "elements.button",
+      "repeatable": false
     }
   },
   "config": {}

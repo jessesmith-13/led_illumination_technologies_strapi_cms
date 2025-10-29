@@ -26,7 +26,14 @@ export interface BlocksHeroSection extends Struct.ComponentSchema {
     displayName: 'Hero Section';
   };
   attributes: {
-    heading: Schema.Attribute.String;
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    ctaButton: Schema.Attribute.Component<'elements.button', false>;
+    description: Schema.Attribute.Text;
+    secondaryButton: Schema.Attribute.Component<'elements.button', false>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -47,6 +54,39 @@ export interface BlocksServicesSection extends Struct.ComponentSchema {
   };
   attributes: {
     heading: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsButton extends Struct.ComponentSchema {
+  collectionName: 'components_elements_buttons';
+  info: {
+    displayName: 'button';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsLogo extends Struct.ComponentSchema {
+  collectionName: 'components_elements_logos';
+  info: {
+    displayName: 'logo';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface ElementsNavLink extends Struct.ComponentSchema {
+  collectionName: 'components_elements_nav_links';
+  info: {
+    displayName: 'navLink';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    text: Schema.Attribute.String;
   };
 }
 
@@ -120,6 +160,9 @@ declare module '@strapi/strapi' {
       'blocks.hero-section': BlocksHeroSection;
       'blocks.quote-section': BlocksQuoteSection;
       'blocks.services-section': BlocksServicesSection;
+      'elements.button': ElementsButton;
+      'elements.logo': ElementsLogo;
+      'elements.nav-link': ElementsNavLink;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
