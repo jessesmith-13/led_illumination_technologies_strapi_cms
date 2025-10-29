@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_blocks_services_sections",
+  "collectionName": "components_blocks_features_sections",
   "info": {
-    "displayName": "Services Section"
+    "displayName": "Features Section"
   },
   "options": {},
   "attributes": {
@@ -9,11 +9,11 @@
       "type": "string"
     },
     "subtitle": {
-      "type": "text"
+      "type": "string"
     },
-    "serviceItem": {
+    "featureCard": {
       "type": "component",
-      "component": "elements.service-item",
+      "component": "elements.feature-card",
       "repeatable": true
     }
   },
