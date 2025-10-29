@@ -6,7 +6,10 @@ export interface BlocksAboutSection extends Struct.ComponentSchema {
     displayName: 'About Section';
   };
   attributes: {
-    heading: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
+    stats: Schema.Attribute.Component<'elements.stat', true>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -28,7 +31,9 @@ export interface BlocksGallerySection extends Struct.ComponentSchema {
     displayName: 'Gallery Section';
   };
   attributes: {
-    heading: Schema.Attribute.String;
+    galleryItems: Schema.Attribute.Component<'elements.gallery-item', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -49,13 +54,30 @@ export interface BlocksHeroSection extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksProducts extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_products';
+  info: {
+    displayName: 'Products Section';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    productCard: Schema.Attribute.Component<'elements.product-card', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksQuoteSection extends Struct.ComponentSchema {
   collectionName: 'components_blocks_quote_sections';
   info: {
     displayName: 'Quote Section';
   };
   attributes: {
-    heading: Schema.Attribute.String;
+    formDescription: Schema.Attribute.Text;
+    formTitle: Schema.Attribute.String;
+    quoteForm: Schema.Attribute.Component<'elements.quote-form', false>;
+    sectionDescription: Schema.Attribute.String;
+    sectionTitle: Schema.Attribute.String;
   };
 }
 
@@ -68,6 +90,16 @@ export interface BlocksServicesSection extends Struct.ComponentSchema {
     serviceItem: Schema.Attribute.Component<'elements.service-item', true>;
     subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsApplication extends Struct.ComponentSchema {
+  collectionName: 'components_elements_applications';
+  info: {
+    displayName: 'application';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
   };
 }
 
@@ -104,6 +136,29 @@ export interface ElementsFeatureCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsFooterSection extends Struct.ComponentSchema {
+  collectionName: 'components_elements_footer_sections';
+  info: {
+    displayName: 'footerSection';
+  };
+  attributes: {
+    navLinks: Schema.Attribute.Component<'elements.nav-link', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsGalleryItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_gallery_items';
+  info: {
+    displayName: 'galleryItem';
+  };
+  attributes: {
+    afterImage: Schema.Attribute.Media<'images'>;
+    beforeImage: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsIcon extends Struct.ComponentSchema {
   collectionName: 'components_elements_icons';
   info: {
@@ -136,6 +191,35 @@ export interface ElementsNavLink extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsProductCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_product_cards';
+  info: {
+    displayName: 'productCard';
+  };
+  attributes: {
+    application: Schema.Attribute.Component<'elements.application', true>;
+    description: Schema.Attribute.String;
+    haze: Schema.Attribute.String;
+    model: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    transmittance: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsQuoteForm extends Struct.ComponentSchema {
+  collectionName: 'components_elements_quote_forms';
+  info: {
+    displayName: 'quoteForm';
+  };
+  attributes: {
+    email: Schema.Attribute.String;
+    fullName: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    projectDetails: Schema.Attribute.Text;
+    zipcode: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsServiceItem extends Struct.ComponentSchema {
   collectionName: 'components_elements_service_items';
   info: {
@@ -146,6 +230,28 @@ export interface ElementsServiceItem extends Struct.ComponentSchema {
     feature: Schema.Attribute.Component<'elements.feature', true>;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsSocialIcon extends Struct.ComponentSchema {
+  collectionName: 'components_elements_social_icons';
+  info: {
+    displayName: 'socialIcon';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    platform: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsStat extends Struct.ComponentSchema {
+  collectionName: 'components_elements_stats';
+  info: {
+    displayName: 'stat';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
   };
 }
 
@@ -218,15 +324,23 @@ declare module '@strapi/strapi' {
       'blocks.features-section': BlocksFeaturesSection;
       'blocks.gallery-section': BlocksGallerySection;
       'blocks.hero-section': BlocksHeroSection;
+      'blocks.products': BlocksProducts;
       'blocks.quote-section': BlocksQuoteSection;
       'blocks.services-section': BlocksServicesSection;
+      'elements.application': ElementsApplication;
       'elements.button': ElementsButton;
       'elements.feature': ElementsFeature;
       'elements.feature-card': ElementsFeatureCard;
+      'elements.footer-section': ElementsFooterSection;
+      'elements.gallery-item': ElementsGalleryItem;
       'elements.icon': ElementsIcon;
       'elements.logo': ElementsLogo;
       'elements.nav-link': ElementsNavLink;
+      'elements.product-card': ElementsProductCard;
+      'elements.quote-form': ElementsQuoteForm;
       'elements.service-item': ElementsServiceItem;
+      'elements.social-icon': ElementsSocialIcon;
+      'elements.stat': ElementsStat;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

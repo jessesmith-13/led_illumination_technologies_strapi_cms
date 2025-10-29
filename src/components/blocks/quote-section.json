@@ -5,8 +5,22 @@
   },
   "options": {},
   "attributes": {
-    "heading": {
+    "sectionTitle": {
       "type": "string"
+    },
+    "sectionDescription": {
+      "type": "string"
+    },
+    "formTitle": {
+      "type": "string"
+    },
+    "formDescription": {
+      "type": "text"
+    },
+    "quoteForm": {
+      "type": "component",
+      "component": "elements.quote-form",
+      "repeatable": false
     }
   },
   "config": {}

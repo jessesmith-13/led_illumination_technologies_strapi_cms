@@ -19,7 +19,8 @@
         "blocks.hero-section",
         "blocks.gallery-section",
         "blocks.about-section",
-        "blocks.features-section"
+        "blocks.features-section",
+        "blocks.products"
       ]
     }
   }

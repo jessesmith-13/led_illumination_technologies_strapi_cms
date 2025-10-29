@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_elements_footer_sections",
+  "info": {
+    "displayName": "footerSection"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "navLinks": {
+      "type": "component",
+      "component": "elements.nav-link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

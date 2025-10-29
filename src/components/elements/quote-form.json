@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_elements_quote_forms",
+  "info": {
+    "displayName": "quoteForm"
+  },
+  "options": {},
+  "attributes": {
+    "fullName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "zipcode": {
+      "type": "string"
+    },
+    "projectDetails": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
