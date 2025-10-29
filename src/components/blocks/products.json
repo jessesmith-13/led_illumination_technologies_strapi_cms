@@ -1,26 +1,29 @@
 {
-  "collectionName": "components_blocks_about_sections",
+  "collectionName": "components_blocks_products",
   "info": {
-    "displayName": "About Section"
+    "displayName": "Products Section"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
+    "subtitle": {
+      "type": "string"
     },
     "image": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
-        "images"
+        "images",
+        "files",
+        "videos",
+        "audios"
       ]
     },
-    "stats": {
+    "productCard": {
       "type": "component",
-      "component": "elements.stat",
+      "component": "elements.product-card",
       "repeatable": true
     }
   },

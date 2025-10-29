@@ -11,8 +11,30 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "heading": {
+    "logoText": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "phone": {
       "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "footerSections": {
+      "type": "component",
+      "component": "elements.footer-section",
+      "repeatable": true
+    },
+    "copyright": {
+      "type": "text"
+    },
+    "socialIcons": {
+      "type": "component",
+      "component": "elements.social-icon",
+      "repeatable": true
     }
   }
 }

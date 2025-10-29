@@ -575,17 +575,23 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    copyright: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    heading: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    email: Schema.Attribute.String;
+    footerSections: Schema.Attribute.Component<'elements.footer-section', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::footer.footer'
     > &
       Schema.Attribute.Private;
+    logoText: Schema.Attribute.Text;
+    phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    socialIcons: Schema.Attribute.Component<'elements.social-icon', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -672,6 +678,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
         'blocks.gallery-section',
         'blocks.about-section',
         'blocks.features-section',
+        'blocks.products',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

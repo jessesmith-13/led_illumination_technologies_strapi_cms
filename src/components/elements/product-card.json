@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_elements_product_cards",
+  "info": {
+    "displayName": "productCard"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "transmittance": {
+      "type": "string"
+    },
+    "haze": {
+      "type": "string"
+    },
+    "application": {
+      "type": "component",
+      "component": "elements.application",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

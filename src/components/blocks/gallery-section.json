@@ -5,8 +5,16 @@
   },
   "options": {},
   "attributes": {
-    "heading": {
+    "title": {
       "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "galleryItems": {
+      "type": "component",
+      "component": "elements.gallery-item",
+      "repeatable": true
     }
   },
   "config": {}

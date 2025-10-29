@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_elements_applications",
+  "info": {
+    "displayName": "application"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
