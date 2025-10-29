@@ -10,6 +10,18 @@ export interface BlocksAboutSection extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksFeaturesSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_features_sections';
+  info: {
+    displayName: 'Features Section';
+  };
+  attributes: {
+    featureCard: Schema.Attribute.Component<'elements.feature-card', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksGallerySection extends Struct.ComponentSchema {
   collectionName: 'components_blocks_gallery_sections';
   info: {
@@ -53,7 +65,9 @@ export interface BlocksServicesSection extends Struct.ComponentSchema {
     displayName: 'Services Section';
   };
   attributes: {
-    heading: Schema.Attribute.String;
+    serviceItem: Schema.Attribute.Component<'elements.service-item', true>;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -65,6 +79,38 @@ export interface ElementsButton extends Struct.ComponentSchema {
   attributes: {
     href: Schema.Attribute.String;
     label: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsFeature extends Struct.ComponentSchema {
+  collectionName: 'components_elements_features';
+  info: {
+    displayName: 'feature';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsFeatureCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_feature_cards';
+  info: {
+    displayName: 'featureCard';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsIcon extends Struct.ComponentSchema {
+  collectionName: 'components_elements_icons';
+  info: {
+    displayName: 'icon';
+  };
+  attributes: {
+    name: Schema.Attribute.String;
   };
 }
 
@@ -87,6 +133,19 @@ export interface ElementsNavLink extends Struct.ComponentSchema {
     href: Schema.Attribute.String;
     isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     text: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsServiceItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_service_items';
+  info: {
+    displayName: 'serviceItem';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    feature: Schema.Attribute.Component<'elements.feature', true>;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -156,13 +215,18 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'blocks.about-section': BlocksAboutSection;
+      'blocks.features-section': BlocksFeaturesSection;
       'blocks.gallery-section': BlocksGallerySection;
       'blocks.hero-section': BlocksHeroSection;
       'blocks.quote-section': BlocksQuoteSection;
       'blocks.services-section': BlocksServicesSection;
       'elements.button': ElementsButton;
+      'elements.feature': ElementsFeature;
+      'elements.feature-card': ElementsFeatureCard;
+      'elements.icon': ElementsIcon;
       'elements.logo': ElementsLogo;
       'elements.nav-link': ElementsNavLink;
+      'elements.service-item': ElementsServiceItem;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
