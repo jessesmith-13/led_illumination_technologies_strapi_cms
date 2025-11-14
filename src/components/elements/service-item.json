@@ -21,7 +21,7 @@
         "audios"
       ]
     },
-    "feature": {
+    "features": {
       "type": "component",
       "component": "elements.feature",
       "repeatable": true

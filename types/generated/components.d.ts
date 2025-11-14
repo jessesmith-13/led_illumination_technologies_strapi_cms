@@ -34,6 +34,12 @@ export interface BlocksGallerySection extends Struct.ComponentSchema {
     galleryItems: Schema.Attribute.Component<'elements.gallery-item', true>;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
+    videoGalleryItems: Schema.Attribute.Component<
+      'elements.video-gallery-item',
+      true
+    >;
+    videosSubtitle: Schema.Attribute.String;
+    videosTitle: Schema.Attribute.String;
   };
 }
 
@@ -87,7 +93,7 @@ export interface BlocksServicesSection extends Struct.ComponentSchema {
     displayName: 'Services Section';
   };
   attributes: {
-    serviceItem: Schema.Attribute.Component<'elements.service-item', true>;
+    serviceItems: Schema.Attribute.Component<'elements.service-item', true>;
     subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
@@ -227,7 +233,7 @@ export interface ElementsServiceItem extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    feature: Schema.Attribute.Component<'elements.feature', true>;
+    features: Schema.Attribute.Component<'elements.feature', true>;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
@@ -252,6 +258,20 @@ export interface ElementsStat extends Struct.ComponentSchema {
   attributes: {
     label: Schema.Attribute.String;
     value: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsVideoGalleryItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_video_gallery_items';
+  info: {
+    displayName: 'videoGalleryItem';
+  };
+  attributes: {
+    subtitle: Schema.Attribute.Text;
+    thumbnail: Schema.Attribute.Media<'files' | 'images'>;
+    title: Schema.Attribute.String;
+    video: Schema.Attribute.Media<'files' | 'videos'>;
+    youtubeUrl: Schema.Attribute.String;
   };
 }
 
@@ -341,6 +361,7 @@ declare module '@strapi/strapi' {
       'elements.service-item': ElementsServiceItem;
       'elements.social-icon': ElementsSocialIcon;
       'elements.stat': ElementsStat;
+      'elements.video-gallery-item': ElementsVideoGalleryItem;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

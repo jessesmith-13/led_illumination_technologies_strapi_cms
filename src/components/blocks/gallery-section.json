@@ -15,6 +15,17 @@
       "type": "component",
       "component": "elements.gallery-item",
       "repeatable": true
+    },
+    "videosTitle": {
+      "type": "string"
+    },
+    "videosSubtitle": {
+      "type": "string"
+    },
+    "videoGalleryItems": {
+      "type": "component",
+      "component": "elements.video-gallery-item",
+      "repeatable": true
     }
   },
   "config": {}
