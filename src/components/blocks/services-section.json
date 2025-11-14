@@ -11,7 +11,7 @@
     "subtitle": {
       "type": "text"
     },
-    "serviceItem": {
+    "serviceItems": {
       "type": "component",
       "component": "elements.service-item",
       "repeatable": true

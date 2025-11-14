@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_elements_video_gallery_items",
+  "info": {
+    "displayName": "videoGalleryItem"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files",
+        "videos"
+      ]
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "youtubeUrl": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
