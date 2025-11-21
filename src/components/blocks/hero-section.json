@@ -33,6 +33,24 @@
       "type": "component",
       "component": "elements.button",
       "repeatable": false
+    },
+    "firstBadgeStatistic": {
+      "type": "string"
+    },
+    "secondBadgeStatistic": {
+      "type": "string"
+    },
+    "thirdBadgeStatistic": {
+      "type": "string"
+    },
+    "firstBadgeText": {
+      "type": "string"
+    },
+    "secondBadgeText": {
+      "type": "string"
+    },
+    "thirdBadgeText": {
+      "type": "string"
     }
   },
   "config": {}
