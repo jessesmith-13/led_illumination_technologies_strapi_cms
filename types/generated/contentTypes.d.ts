@@ -469,12 +469,15 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    contactOneName: Schema.Attribute.String;
+    contactTwoName: Schema.Attribute.String;
     copyright: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
     email: Schema.Attribute.String;
+    emailTwo: Schema.Attribute.String;
     footerSections: Schema.Attribute.Component<'elements.footer-section', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -485,6 +488,7 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
     logo: Schema.Attribute.Component<'elements.logo', false>;
     logoText: Schema.Attribute.Text;
     phone: Schema.Attribute.String;
+    phoneTwo: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     socialIcons: Schema.Attribute.Component<'elements.social-icon', true>;
     updatedAt: Schema.Attribute.DateTime;

@@ -54,8 +54,14 @@ export interface BlocksHeroSection extends Struct.ComponentSchema {
     >;
     ctaButton: Schema.Attribute.Component<'elements.button', false>;
     description: Schema.Attribute.Text;
+    firstBadgeStatistic: Schema.Attribute.String;
+    firstBadgeText: Schema.Attribute.String;
     secondaryButton: Schema.Attribute.Component<'elements.button', false>;
+    secondBadgeStatistic: Schema.Attribute.String;
+    secondBadgeText: Schema.Attribute.String;
     subtitle: Schema.Attribute.String;
+    thirdBadgeStatistic: Schema.Attribute.String;
+    thirdBadgeText: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }

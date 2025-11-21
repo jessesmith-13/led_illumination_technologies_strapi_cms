@@ -40,6 +40,18 @@
       "type": "component",
       "component": "elements.logo",
       "repeatable": false
+    },
+    "contactOneName": {
+      "type": "string"
+    },
+    "contactTwoName": {
+      "type": "string"
+    },
+    "phoneTwo": {
+      "type": "string"
+    },
+    "emailTwo": {
+      "type": "string"
     }
   }
 }
