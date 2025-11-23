@@ -14,8 +14,8 @@
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
     "upgrade:dry": "npx @strapi/upgrade latest --dry",
-    "dev:sqlite": "cp .env.development .env && npm run develop",
-    "dev:pg": "cp .env.production .env && npm run develop"
+    "dev:dev": "cp .env.development .env && npm run develop",
+    "dev:prod": "cp .env.production .env && npm run develop"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.29.0",
