@@ -13,7 +13,7 @@ export default ({ env }) => {
     };
   }
 
-  // Default to PostgreSQL
+  // PostgreSQL (Render)
   return {
     connection: {
       client: 'postgres',
@@ -23,7 +23,9 @@ export default ({ env }) => {
         database: env('DATABASE_NAME', 'strapi'),
         user: env('DATABASE_USERNAME', 'strapi'),
         password: env('DATABASE_PASSWORD', 'strapi123'),
-        ssl: env.bool('DATABASE_SSL', false),
+        ssl: env.bool('DATABASE_SSL', false)
+          ? { rejectUnauthorized: false }
+          : false,
       },
     },
   };
