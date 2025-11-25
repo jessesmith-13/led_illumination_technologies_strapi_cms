@@ -131,3 +131,13 @@ build
 .strapi-cloud.json
 .env.development
 .env.production
+
+# NEVER commit exports/backups
+*.tar.gz
+*.tar.gz.enc
+data_sqlite*
+export_*.gz
+export_*.enc
+
+# uploads should NOT be in GitHub
+public/uploads/
