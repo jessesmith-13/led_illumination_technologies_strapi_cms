@@ -40,7 +40,7 @@ $RECYCLE.BIN/
 *.csv
 *.dat
 *.dmg
-*.gz
+# *.gz
 *.iso
 *.jar
 *.rar
@@ -133,10 +133,10 @@ build
 .env.production
 
 # NEVER commit exports/backups
-*.tar.gz
-*.tar.gz.enc
+# *.tar.gz
+# *.tar.gz.enc
 data_sqlite*
-export_*.gz
+# export_*.gz
 export_*.enc
 
 # uploads should NOT be in GitHub
