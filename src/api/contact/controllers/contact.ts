@@ -10,8 +10,11 @@ export default factories.createCoreController("api::contact.contact", ({ strapi 
         return ctx.badRequest("All fields are required.");
       }
 
+<<<<<<< HEAD
       console.log("SMTP_TO:", process.env.SMTP_TO);
 
+=======
+>>>>>>> f13899e1aa7c520c6044678b2c3268d514aa6b3e
       // ✅ create Nodemailer transport (Ethereal for dev)
       const transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST || "smtp.ethereal.email",
