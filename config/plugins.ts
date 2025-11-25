@@ -13,4 +13,9 @@ export default ({ env }) => ({
       defaultReplyTo: env('SMTP_DEFAULT_REPLY_TO', 'ocortez@ledilluminationtech.com'),
     },
   },
+  'users-permissions': {
+    config: {
+      jwtSecret: env('JWT_SECRET'),
+    },
+  },
 });
