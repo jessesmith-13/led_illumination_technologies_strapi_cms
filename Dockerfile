@@ -9,7 +9,7 @@ COPY . .
 
 ENV NODE_ENV=production
 
-COPY imports ./imports
+# COPY imports ./imports
 
 RUN npm run build
 
