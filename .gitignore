@@ -141,3 +141,12 @@ export_*.enc
 
 # uploads should NOT be in GitHub
 public/uploads/
+
+# Strapi exports and backups
+*.tar.gz
+*.tar.gz.tar.gz
+*_export*.tar.gz
+export_*.tar.gz.enc
+clean_export.*
+fresh_export.*
+strapi-local-data.zip
