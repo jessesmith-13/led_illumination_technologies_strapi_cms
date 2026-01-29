@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:20-alpine
 
 WORKDIR /app
 
@@ -8,8 +8,6 @@ RUN npm install --production
 COPY . .
 
 ENV NODE_ENV=production
-
-# COPY imports ./imports
 
 RUN npm run build
 
