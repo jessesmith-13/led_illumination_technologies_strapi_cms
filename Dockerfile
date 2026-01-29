@@ -9,6 +9,8 @@ COPY . .
 
 ENV NODE_ENV=production
 
+COPY imports ./imports
+
 RUN npm run build
 
 EXPOSE 1337
